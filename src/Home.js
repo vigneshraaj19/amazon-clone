@@ -5,8 +5,18 @@ function Home() {
   return (
     <div className="home">
         <div className="home__container">
-            <img className="home__image" 
-             src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/Gateway/2021/desktop-2x._CB658860139_.jpg" alt="" />
+
+            {/* <img className="home__image" 
+             src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/Gateway/2021/desktop-2x._CB658860139_.jpg" alt="" /> */}
+              {/* <img className="home__image" 
+             src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Beauty/GW/May/Unrec/Kotak/Skincare-desktop-Hero._CB637398142_.jpg" alt="" /> */}
+             <img className="home__image" 
+             src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/WLA/unrec/D39822856_WLA_BAU_GW-Unrec-heroes_DesktopTallHero_3000x1200_p._CB623159886_.jpg" alt="" />
+             {/* <img className="home__image" 
+             src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/Heropanti2/3000x1200_Hero-Tall_NP._CB637454814_.jpg" alt="" />  */}
+                 
+                   
+                
     <div className="home__row">
           <Product
            
