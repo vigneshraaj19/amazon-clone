@@ -14,9 +14,9 @@ modules={[Navigation,Autoplay]}
 slidesPerView={1}
 loop={true}
 autoplay={{
-    delay: 1000,
+    delay: 2000,
 }}
-navigation
+
 >
    <SwiperSlide>
   <img className="home__image" 
