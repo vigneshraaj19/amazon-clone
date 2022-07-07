@@ -21,8 +21,7 @@ export default function Logins()
 
   const register = e => {
     e.preventDefault();
-
-     
+    
      createUserWithEmailAndPassword(auth,email, password)
      .then((auth) => {
         
