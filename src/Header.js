@@ -27,12 +27,12 @@ function Header()
     
     <div className="header__search">
         <input
-        className="header__searchInput" type="text"></input> 
+        className="header__searchInput" placeholder='Search for items' type="text"></input> 
         <SearchIcon className="header__searchIcon"/>
         </div>
         <div className='header__nav'>
             {/* signin option */}
-            <Link to={!user && "/login"}>
+            <Link to ={!user && "/login"} style={{ textDecoration: 'none'}}>
             <div onClick={handleAuthentication} className="header__option">
              <span className="header__optionLineone">{user ? user.email: 'Hello guest'}</span>
              <span className="header__optionLinetwo">{user ? 'Sign Out' : 'Sign In'}</span>
@@ -49,7 +49,7 @@ function Header()
              <span className="header__optionLinetwo">Prime</span>
             </div>
 
-           <Link to="/checkout">
+           <Link to="/checkout" style={{ textDecoration: 'none'}}>
            <div className="header__optionBasket">
                 <ShoppingBasketIcon />
                 <span  className='header__optionLineTwo header__basketCount'>{basket?.length}</span>     

@@ -1,15 +1,46 @@
 import React from 'react';
 import "./Home.css";
 import Product from "./Product";
-import Login from './Login';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
 function Home() {
   return (
-    
-      <div>
-                 <Login />
-                      {/* we have implement the swiper option for every 3 sec to go every image */}   
-                      <div className="home">     
-     <div className="home__container">       
+    <div>
+      <Swiper
+// install Swiper modules
+modules={[Navigation,Autoplay]}
+slidesPerView={1}
+loop={true}
+autoplay={{
+    delay: 2000,
+}}
+
+>
+   <SwiperSlide>
+  <img className="home__image" 
+       src="https://images-eu.ssl-images-amazon.com/images/G/31/prime/Gateway/2021/desktop-2x._CB658860139_.jpg" alt="" />
+       </SwiperSlide>
+        <SwiperSlide>
+       <img className="home__image" 
+       src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Beauty/GW/May/Unrec/Kotak/Skincare-desktop-Hero._CB637398142_.jpg" alt="" />
+       </SwiperSlide>
+        <SwiperSlide>
+       <img className="home__image" 
+       src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2022/BAU/ATFGW/3000x1200_best_find_coupon._CB636934541_.jpg" alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+       <img className="home__image" 
+       src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2021/X-site/SingleTitle/Heropanti2/3000x1200_Hero-Tall_NP._CB637454814_.jpg" alt="" />
+     </SwiperSlide>
+</Swiper>
+       <div className="home">     
+     <div className="home__container">   
          <div className="home__row">
           <Product
             id="12321341"
@@ -61,8 +92,9 @@ function Home() {
           />
         </div>
         </div>
-    </div>
-    </div>
+        </div>
+        </div>
+    
   )
 }
 
