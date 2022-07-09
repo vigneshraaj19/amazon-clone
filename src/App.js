@@ -12,6 +12,11 @@ import Login from "./Login";
 import Logins from "./logins";
 import React, { useEffect } from "react";
 import {useStateValue} from "./StateProvider";
+import Payment from "./Payment";
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
+
+const promise=loadStripe("pk_test_51LJalQSI39jpT9zP0O7bpYhyqaiORuUoXg6Zpg0IgZbUZbQ7i7b2lqGCw3c808vr3VmNcraqqJzPOa59veefFvKp00ITz12w6y");
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -42,6 +47,10 @@ function App() {
       <Route path="/" element={<Home/>}  />
       <Route path="/checkout" element={<><Checkout /></>} />
       <Route path="/login" element={<><Logins /></>} />
+      <Route path="/payment" element={<>
+      <Elements stripe={promise}>
+      <Payment />
+      </Elements></>} />
     </Routes>
     </div>
 
