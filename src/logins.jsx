@@ -3,6 +3,7 @@ import './Login.css';
 import { useNavigate} from "react-router-dom";
 import { auth } from "./firebase";
 import {signInWithEmailAndPassword,createUserWithEmailAndPassword} from 'firebase/auth'
+import { toast } from 'react-toastify';
 export default function Logins() 
 {
   const history = useNavigate();
@@ -15,8 +16,9 @@ export default function Logins()
      signInWithEmailAndPassword(auth,email, password)
     .then(() => {
           history("/");
+          toast.success("Login successful");
      }) 
-     .catch(error => alert(error.message))
+     .catch(err => toast.error("Enter valid Email and Password"))
   }
 
   const register = e => {
@@ -26,10 +28,10 @@ export default function Logins()
      .then((auth) => {
         
          if (auth) {
-            alert("Account created successfully");
+            toast.success("Account created successfully");
          }
      })
-     .catch(error => alert(error.message))
+     .catch(error => toast.error("Enter given Email-id already exist"))
   }
  
   return (

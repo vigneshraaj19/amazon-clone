@@ -8,6 +8,7 @@ import {CardElement,useStripe,useElements} from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import {getBasketTotal} from "./reducer";
 import axios from './axios';
+import { toast } from 'react-toastify';
 
 function Payment() {
     let history = useNavigate();
@@ -58,11 +59,12 @@ function Payment() {
                 type:"EMPTY_BASKET"
             })
               history("../orders", { replace: true });
+              toast.success("Payment Successful");
         })
     }
     else{
     console.log(userid);
-    alert("please login");
+    toast.error("Please Login for Payments")
     }
     }
     

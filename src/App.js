@@ -16,6 +16,8 @@ import Payment from "./Payment";
 import {loadStripe} from "@stripe/stripe-js";
 import {Elements} from "@stripe/react-stripe-js";
 import Orders from "./Orders";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const promise=loadStripe("pk_test_51LJalQSI39jpT9zP0O7bpYhyqaiORuUoXg6Zpg0IgZbUZbQ7i7b2lqGCw3c808vr3VmNcraqqJzPOa59veefFvKp00ITz12w6y");
 
 function App() {
@@ -53,6 +55,7 @@ function App() {
       <Payment />
       </Elements></>} />
     </Routes>
+    <ToastContainer />
     </div>
 
   );
