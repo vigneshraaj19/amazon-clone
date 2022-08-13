@@ -41,19 +41,30 @@ function Payment() {
         // do all the fancy stripe stuff...
         event.preventDefault();
         setProcessing(true);
+        if(user.uid!=null)
+      { 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: elements.getElement(CardElement)
             }
         }).then(({ paymentIntent  }) =>{
+           
             setSucceeded(true)
             setError(null)
             setProcessing(false)
+            console.log(user.uid);
+            console.log(basket);
+            console.log(paymentIntent.id);
             dispatch({
                 type:"EMPTY_BASKET"
             })
               history("../orders", { replace: true });
         })
+        
+    }
+    else{
+        alert("Login for payments");
+    }
     }
 
   const handleChange = event =>{
