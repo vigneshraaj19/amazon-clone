@@ -12,10 +12,10 @@ import axios from './axios';
 function Payment() {
     let history = useNavigate();
     const[{ basket,user},dispatch] = useStateValue();
-
+    var userid=user?.uid;
     const stripe =useStripe();
     const elements=useElements();
-
+    
     const [error,setError]=useState(null);
     const [succeeded, setSucceeded] = useState(false);
     const [processing, setProcessing] = useState("");
@@ -36,13 +36,12 @@ function Payment() {
     }, [basket])
 
     console.log('THE SECRET IS',clientSecret);
-
     const handleSubmit = async (event) => {
         // do all the fancy stripe stuff...
         event.preventDefault();
+        if(userid)
+        {
         setProcessing(true);
-        if(user.uid!=null)
-      { 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: elements.getElement(CardElement)
@@ -52,7 +51,7 @@ function Payment() {
             setSucceeded(true)
             setError(null)
             setProcessing(false)
-            console.log(user.uid);
+            console.log(userid);
             console.log(basket);
             console.log(paymentIntent.id);
             dispatch({
@@ -60,12 +59,15 @@ function Payment() {
             })
               history("../orders", { replace: true });
         })
-        
     }
     else{
-        alert("Login for payments");
+    console.log(userid);
+    alert("please login");
     }
     }
+    
+        
+    
 
   const handleChange = event =>{
        //listen for changes in the cardelement
