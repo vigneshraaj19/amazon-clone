@@ -48,17 +48,21 @@ function Payment() {
         }).then(({ paymentIntent  }) =>{
             setSucceeded(true)
             setError(null)
-             setProcessing(false)
-             history("../orders", { replace: true });
+            setProcessing(false)
+            dispatch({
+                type:"EMPTY_BASKET"
+            })
+              history("../orders", { replace: true });
         })
     }
+
   const handleChange = event =>{
        //listen for changes in the cardelement
        //and display any errors as a customer types there card details
        setDisabled(event.empty);
        setError(event.error ? event.error.message : "");
-
   }
+
     return(
     <div className="payment">
         <div className="payment_container">
@@ -115,6 +119,7 @@ function Payment() {
                                         <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                                     </button>
                     </div>
+                    {error && <div>{error}</div>}
                 </form>
 
              </div>

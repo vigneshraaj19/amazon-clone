@@ -1,0 +1,58 @@
+[debug] [2022-08-13T08:45:09.078Z] ----------------------------------------------------------------------
+[debug] [2022-08-13T08:45:09.080Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Vignesh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-08-13T08:45:09.081Z] CLI Version:   11.6.0
+[debug] [2022-08-13T08:45:09.081Z] Platform:      win32
+[debug] [2022-08-13T08:45:09.081Z] Node Version:  v18.7.0
+[debug] [2022-08-13T08:45:09.082Z] Time:          Sat Aug 13 2022 14:15:09 GMT+0530 (India Standard Time)
+[debug] [2022-08-13T08:45:09.082Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-13T08:45:09.152Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-13T08:45:09.153Z] > authorizing via signed-in user (vigneshraaj19@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Vignesh\Desktop\amazon clone\amazon-clone
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-08-13T08:46:57.432Z] Using project from CLI flag: challenge-113d7
+[debug] [2022-08-13T08:46:57.437Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/challenge-113d7 [none]
+[debug] [2022-08-13T08:46:58.665Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/challenge-113d7 200
+[debug] [2022-08-13T08:46:58.665Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/challenge-113d7 {"projectId":"challenge-113d7","projectNumber":"716600883509","displayName":"amazon-challenge","name":"projects/challenge-113d7","resources":{"hostingSite":"challenge-113d7","storageBucket":"challenge-113d7.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE","etag":"1_1b2c86f2-b102-4567-9629-fa3462bf0f88"}
+[info] i  Using project challenge-113d7 (amazon-challenge) 
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with sample code
+[info] pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2022-08-13T08:46:58.685Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-13T08:46:58.687Z] > authorizing via signed-in user (vigneshraaj19@gmail.com)
+[debug] [2022-08-13T08:46:58.687Z] [iam] checking project challenge-113d7 for permissions ["firebase.projects.get"]
+[debug] [2022-08-13T08:46:58.688Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/challenge-113d7:testIamPermissions [none]
+[debug] [2022-08-13T08:46:58.688Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/challenge-113d7:testIamPermissions x-goog-quota-user=projects/challenge-113d7
+[debug] [2022-08-13T08:46:58.688Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/challenge-113d7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-08-13T08:47:00.449Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/challenge-113d7:testIamPermissions 200
+[debug] [2022-08-13T08:47:00.449Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/challenge-113d7:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-08-13T08:47:00.450Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/challenge-113d7/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-08-13T08:47:00.451Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/challenge-113d7/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-08-13T08:47:02.732Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/challenge-113d7/services/cloudfunctions.googleapis.com 200
+[debug] [2022-08-13T08:47:02.732Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/challenge-113d7/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2022-08-13T08:47:03.505Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/challenge-113d7/services/runtimeconfig.googleapis.com 200
+[debug] [2022-08-13T08:47:03.506Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/challenge-113d7/services/runtimeconfig.googleapis.com [omitted]
+[info] +  Wrote functions/package.json 
