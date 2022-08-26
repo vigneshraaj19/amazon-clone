@@ -68,9 +68,6 @@ function Payment() {
     }
     }
     
-        
-    
-
   const handleChange = event =>{
        //listen for changes in the cardelement
        //and display any errors as a customer types there card details
