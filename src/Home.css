@@ -7,10 +7,13 @@
 }
 .home__row
 {
-    display:flex;
-    z-index:1;
-    margin-left:5px;
-    margin-right:5px;
+  margin-top:24px;
+  display:grid;
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
 }
 .home__image{
   width:100%;
